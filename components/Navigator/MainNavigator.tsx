@@ -38,7 +38,7 @@ export const MainNavigator: FC = observer(() => {
 
             <Nav.Link
               target="_blank"
-              href="https://github.com/idea2app/Next-Bootstrap-TS"
+              href="https://github.com/open-source-bazaar/Next-Bootstrap-TS"
             >
               {t('source_code')}
             </Nav.Link>

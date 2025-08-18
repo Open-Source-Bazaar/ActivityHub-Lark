@@ -1,5 +1,5 @@
 {
-  "name": "@idea2app/lark-next-bootstrap-ts",
+  "name": "@open-source-bazaar/activityhub-lark",
   "version": "2.4.0",
   "description": "Lark project scaffold based on TypeScript, React, Next.js, Bootstrap & Workbox.",
   "private": true,
@@ -124,7 +124,7 @@
     "start": "next start",
     "lint": "next lint --fix  &&  git add .  &&  tsc --noEmit",
     "test": "lint-staged  &&  npm run lint",
-    "pack-image": "docker build -t idea2app/lark-next-bootstrap-ts:latest .",
-    "container": "docker rm -f lark-next-bootstrap-ts  &&  docker run --name lark-next-bootstrap-ts -p 3000:3000 -d idea2app/lark-next-bootstrap-ts:latest"
+    "pack-image": "docker build -t open-source-bazaar/activityhub-lark:latest .",
+    "container": "docker rm -f activityhub-lark  &&  docker run --name activityhub-lark -p 3000:3000 -d open-source-bazaar/activityhub-lark:latest"
   }
 }
