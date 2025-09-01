@@ -28,11 +28,7 @@ export default class ListMap extends Component<ListMapProps> {
 
   @computed
   get drawerWidth() {
-    return this.drawerOpen
-      ? systemStore.screenNarrow
-        ? 'w-100'
-        : 'w-25'
-      : 'w-auto';
+    return this.drawerOpen ? (systemStore.screenNarrow ? 'w-100' : 'w-25') : 'w-auto';
   }
 
   @observable
@@ -56,7 +52,7 @@ export default class ListMap extends Component<ListMapProps> {
     return `https://uri.amap.com/marker?${buildURLData({
       position: [longitude, latitude],
       name: title,
-      src: 'KaiYuanShe',
+      src: 'Open_Activity_System',
       coordinate: 'gaode',
       callnative: 1,
     })}`;
@@ -85,11 +81,7 @@ export default class ListMap extends Component<ListMapProps> {
 
     return (
       <div className={`position-relative ${className}`} style={style}>
-        <ChinaMap
-          className="h-100"
-          {...props}
-          markers={currentMarker && [currentMarker]}
-        />
+        <ChinaMap className="h-100" {...props} markers={currentMarker && [currentMarker]} />
         <div
           className={`position-absolute end-0 top-0 h-100 overflow-y-auto d-flex align-items-start ${drawerWidth}`}
           style={{ zIndex: 1000 }}
@@ -102,9 +94,7 @@ export default class ListMap extends Component<ListMapProps> {
             <Icon name="layout-text-sidebar" />
           </Button>
 
-          <ListGroup hidden={!drawerOpen}>
-            {markers.map(this.renderItem)}
-          </ListGroup>
+          <ListGroup hidden={!drawerOpen}>{markers.map(this.renderItem)}</ListGroup>
         </div>
       </div>
     );

@@ -50,8 +50,6 @@ export default class GiftListPage extends ObservedComponent<GiftListPageProps, t
 
   async componentDidMount() {
     await this.activityStore.getOne(this.props.activity.id as string);
-
-    this.activityStore.currentEvaluation!.getUserCount();
   }
 
   render() {
@@ -63,7 +61,7 @@ export default class GiftListPage extends ObservedComponent<GiftListPageProps, t
       <Container>
         <PageHead title={`${t('gift_wall')} - ${activity.name}`} />
         <Breadcrumb>
-          <Breadcrumb.Item href="/">{t('KaiYuanShe')}</Breadcrumb.Item>
+          <Breadcrumb.Item href="/">{t('Open_Activity_System')}</Breadcrumb.Item>
           <Breadcrumb.Item href="/activity">{t('activity')}</Breadcrumb.Item>
           <Breadcrumb.Item href={`/activity/${activity.id}`}>
             {activity.name as string}
@@ -85,7 +83,7 @@ export default class GiftListPage extends ObservedComponent<GiftListPageProps, t
               <ol className="list-unstyled d-flex flex-wrap justify-content-around text-center">
                 {list.map(gift => (
                   <li key={gift.name as string}>
-                    <GiftCard {...gift} disabled={!gift.stock || (session && sumScore < +score)} />
+                    <GiftCard {...gift} disabled={!gift.stock || sumScore < +score} />
                   </li>
                 ))}
               </ol>

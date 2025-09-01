@@ -145,7 +145,7 @@ export default class AgendaDetailPage extends ObservedComponent<
       <Container className="pt-5">
         <PageHead title={`${title} - ${name}`} />
         <Breadcrumb>
-          <Breadcrumb.Item href="/">{t('KaiYuanShe')}</Breadcrumb.Item>
+          <Breadcrumb.Item href="/">{t('Open_Activity_System')}</Breadcrumb.Item>
           <Breadcrumb.Item href="/activity">{t('activity')}</Breadcrumb.Item>
           <Breadcrumb.Item href={`/activity/${alias || id}`}>{name as string}</Breadcrumb.Item>
           <Breadcrumb.Item active>{title as string}</Breadcrumb.Item>

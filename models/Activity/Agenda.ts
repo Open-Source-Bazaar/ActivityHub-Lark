@@ -16,7 +16,6 @@ import { Filter, persist, persistList, toggle } from 'mobx-restful';
 import { Day, groupBy } from 'web-utility';
 
 import { larkClient } from '../Base';
-import userStore from '../Base/User';
 
 export type Agenda = Record<
   | 'id'
@@ -54,11 +53,6 @@ export class AgendaModel extends BiDataTable<Agenda>() {
     public tableId: string,
   ) {
     super(appId, tableId);
-
-    reaction(
-      () => userStore.session,
-      () => userStore.session || (this.authorization = {}),
-    );
   }
 
   client = larkClient;

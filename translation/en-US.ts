@@ -10,15 +10,13 @@ export default {
   pagination: 'Pagination',
   powered_by: 'Powered by',
   documentation: 'Documentation',
-  documentation_summary:
-    'Find in-depth information about Next.js features and API.',
+  documentation_summary: 'Find in-depth information about Next.js features and API.',
   learn: 'Learn',
   learn_summary: 'Learn about Next.js in an interactive course with quizzes!',
   examples: 'Examples',
   examples_summary: 'Discover and deploy boilerplate example Next.js projects.',
   deploy: 'Deploy',
-  deploy_summary:
-    'Instantly deploy your Next.js site to a public URL with Vercel.',
+  deploy_summary: 'Instantly deploy your Next.js site to a public URL with Vercel.',
 
   // Pagination Table
   create: 'Create',
@@ -27,10 +25,8 @@ export default {
   cancel: 'Cancel',
   edit: 'Edit',
   delete: 'Delete',
-  total_x_rows: ({ totalCount }: { totalCount: number }) =>
-    `Total ${totalCount} rows`,
-  sure_to_delete_x: ({ keys }: { keys: IDType[] }) =>
-    `Are you sure to delete ${keys.join(', ')}?`,
+  total_x_rows: ({ totalCount }: { totalCount: number }) => `Total ${totalCount} rows`,
+  sure_to_delete_x: ({ keys }: { keys: IDType[] }) => `Are you sure to delete ${keys.join(', ')}?`,
   repository_name: 'Repository Name',
   programming_language: 'Programming Language',
   topic: 'Topic',
@@ -49,4 +45,91 @@ export default {
   // Search
   keywords: 'Keywords',
   search_results: 'Search Results',
+
+  // Search page
+  keyword: 'Keyword',
+  tag: 'Tag',
+  activity: 'Activity',
+
+  no_data: 'No data',
+  unpublished: 'Unpublished',
+  unclassified: 'Unclassified',
+
+  Open_Activity_System: 'Open Activity System',
+  activity_map: 'Activity Map',
+  previous_activities: 'Previous Activities',
+  activity_statistics: 'Activity Statistics',
+  distribution_of_activity_topics_by_heat: 'Distribution of activity topics by heat',
+  distribution_of_mentor_organizations_by_topics: 'Distribution of mentor organizations by topics',
+
+  // Activity pages
+  highlight_events: 'Highlight Events',
+  volunteer_speaker_registration: 'Volunteer/Speaker Registration',
+  CFP_submission: 'CFP Submission',
+  CFP_file_submission: 'CFP File Submission',
+  reimbursement_application: 'Reimbursement Application',
+  participant_registration: 'Participant Registration',
+  producer_organization: 'Organization',
+  producer: 'Producer',
+  volunteer: 'Volunteer',
+  punch_in: 'Punch-in',
+  punch_in_tips: 'Please ask staffs at punch-in points to scan this QR Code',
+  confirm: 'Confirm',
+  punch_in_successfully: 'Punch-in successfully!',
+  evaluation_form: 'Evaluation Form',
+  gift_wall: 'Gift Wall',
+  available_score: 'Available Score',
+  score_threshold: 'Score Threshold',
+  exchange: 'Exchange',
+  exchange_tips: 'Please ask staffs at the gift wall to scan this QR Code',
+
+  member_x: 'member X',
+  calendar: 'Calendar',
+  share: 'share',
+  file_download: 'File Download',
+  attendee_ratings: 'Attendee Ratings',
+  related_agenda: 'Related Agenda',
+
+  // Invitation pages
+  press_to_share: 'press image to share',
+
+  // Cooperation page
+  主办单位: 'Hosted by',
+  承办单位: 'Organized by',
+  协办单位: 'Co-organized by',
+  指导单位: 'Directed by',
+  大会合作单位: 'Conference Partners',
+  战略赞助: 'Strategic Sponsor',
+  白金赞助: 'Platinum Sponsor',
+  金牌赞助: 'Gold Sponsor',
+  银牌赞助: 'Silver Sponsor',
+  铜牌赞助: 'Bronze Sponsor',
+  星牌赞助: 'Startup Sponsor',
+  个人赞助: 'Individual Sponsor',
+  特别支持: 'Special Support',
+  亮点赞助: 'Highlight Sponsor',
+  成员赞助: 'Member Sponsor',
+  讲师赞助: 'Lecturer Travel Sponsor',
+  国际讲师差旅赞助: 'International Lecturer Travel Sponsor',
+  网站支持: 'Website Support Partner',
+  报名平台伙伴: 'Registration Platform Partner',
+  视频直播伙伴: 'Live Video Broadcast Partner',
+  战略合作社区: 'Strategic Community Partner',
+  战略合作媒体: 'Strategic Media Partner',
+  媒体伙伴: 'Media Partner',
+  社区伙伴: 'Community Partner',
+
+  // Finance page
+  bill_id: 'bill id',
+  bill_createAt: 'created at',
+  bill_location: 'location',
+  bill_createBy: 'created by',
+  bill_type: 'type',
+  bill_price: 'price',
+  bill_invoice: 'invoice',
+  bill_remark: 'note',
+  bill_travelFundTask: 'Volunteer Tasks Assigned',
+  bill_forum: 'forum',
+  bill_agendas: 'agenda',
+  financial_disclosure: 'Financial Disclosure',
 } as const;
