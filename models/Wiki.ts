@@ -1,7 +1,7 @@
 import { WikiNodeModel } from 'mobx-lark';
 
 import { lark } from '../pages/api/Lark/core';
-import { LarkWikiDomain, LarkWikiId } from './configuration';
+import { LarkWikiDomain, LarkWikiId } from '../utility/configuration';
 
 export class MyWikiNodeModel extends WikiNodeModel {
   client = lark.client;

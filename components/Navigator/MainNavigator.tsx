@@ -3,8 +3,8 @@ import dynamic from 'next/dynamic';
 import { FC, useContext } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 
-import { Name } from '../../models/configuration';
 import { I18nContext } from '../../models/Translation';
+import { Name } from '../../utility/configuration';
 
 const LanguageMenu = dynamic(() => import('./LanguageMenu'), { ssr: false });
 
@@ -12,13 +12,7 @@ export const MainNavigator: FC = observer(() => {
   const { t } = useContext(I18nContext);
 
   return (
-    <Navbar
-      bg="primary"
-      variant="dark"
-      fixed="top"
-      expand="sm"
-      collapseOnSelect
-    >
+    <Navbar bg="primary" variant="dark" fixed="top" expand="sm" collapseOnSelect>
       <Container>
         <Navbar.Brand href="/">{Name}</Navbar.Brand>
 
