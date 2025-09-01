@@ -9,7 +9,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { GitCard } from '../components/Git/Card';
 import { PageHead } from '../components/Layout/PageHead';
 import { repositoryStore } from '../models/Base';
-import { I18nContext } from '../models/Translation';
+import { I18nContext } from '../models/Base/Translation';
 
 export const getServerSideProps = compose(errorLogger, cache(), async () => {
   const list = await new RepositoryModel('open-source-bazaar').getList();

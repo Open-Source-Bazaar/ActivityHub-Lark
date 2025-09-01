@@ -1,7 +1,7 @@
 import { ComponentClass, FC } from 'react';
 import { Col, Pagination, Row } from 'react-bootstrap';
 
-import { SearchPageMeta } from '../../models/System';
+import { SearchPageMeta } from '../../models/Base/System';
 
 export interface CardPageProps extends SearchPageMeta {
   Card: ComponentClass<any> | FC<any>;

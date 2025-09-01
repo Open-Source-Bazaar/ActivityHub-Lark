@@ -9,7 +9,7 @@ import {
   InputGroupProps,
 } from 'react-bootstrap';
 
-import { I18nContext } from '../../models/Translation';
+import { I18nContext } from '../../models/Base/Translation';
 import styles from './SearchBar.module.less';
 
 export interface SearchBarProps

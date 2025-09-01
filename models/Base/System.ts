@@ -3,8 +3,8 @@ import { BiSearchModelClass } from 'mobx-lark';
 import { BaseModel, toggle } from 'mobx-restful';
 import { parseURLData, URLData } from 'web-utility';
 
-import { SearchActivityModel } from './Activity';
-import { larkClient } from './Base';
+import { SearchActivityModel } from '../Activity';
+import { larkClient } from './index';
 
 export type SearchPageMeta = Pick<
   InstanceType<BiSearchModelClass>,

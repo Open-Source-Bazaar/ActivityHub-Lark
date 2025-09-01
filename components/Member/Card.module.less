@@ -1,0 +1,63 @@
+.member {
+  flex: none;
+  content-visibility: auto;
+  contain-intrinsic-height: 10rem;
+
+  .avatar {
+    transition: all 0.3s;
+    width: 6rem;
+    height: 6rem;
+    object-fit: contain;
+  }
+  .btn_tamaya {
+    width: 6rem;
+    height: 1rem;
+    line-height: 1rem;
+    &::before,
+    &::after {
+      position: absolute;
+      left: 0;
+      transition: transform 0.5s;
+      transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+      width: 6rem;
+      height: 0.5rem;
+      overflow: hidden;
+      content: attr(data-text);
+      color: #333;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+      line-height: 0;
+    }
+    & > i {
+      transform: scale3d(0.2, 0.2, 1);
+      opacity: 0;
+      transition:
+        transform 0.5s,
+        opacity 0.5s;
+      transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    }
+  }
+  &:hover {
+    .avatar {
+      transform: scale(1.05) translate3d(-1px, -5px, -4px);
+    }
+    .btn_tamaya {
+      &::before {
+        transform: translate3d(0, -120%, 0);
+      }
+      &::after {
+        transform: translate3d(0, 120%, 0);
+      }
+      & > i {
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+      }
+    }
+  }
+}

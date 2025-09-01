@@ -1,4 +1,4 @@
-import { i18n } from '../../models/Translation';
+import { i18n } from '../../models/Base/Translation';
 
 export const mainNav = ({ t }: typeof i18n) => [
   {

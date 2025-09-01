@@ -6,7 +6,7 @@ import Document, {
   NextScript,
 } from 'next/document';
 
-import { LanguageCode, parseSSRContext } from '../models/Translation';
+import { LanguageCode, parseSSRContext } from '../models/Base/Translation';
 
 interface CustomDocumentProps {
   language: LanguageCode;

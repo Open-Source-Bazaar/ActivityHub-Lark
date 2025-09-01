@@ -12,7 +12,7 @@ import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-tsx';
 
 import { PageHead } from '../components/Layout/PageHead';
-import { I18nContext } from '../models/Translation';
+import { I18nContext } from '../models/Base/Translation';
 import RichEditData from './api/rich-edit.json';
 
 const HTMLEditor = dynamic(() => import('../components/Form/HTMLEditor'), {
