@@ -48,7 +48,7 @@ export class SystemModel extends BaseModel {
   @toggle('downloading')
   async getCityCoordinate() {
     const { body } = await larkClient.get<CityCoordinateMap>(
-      'https://idea2app.github.io/public-meta-data/china-city-coordinate.json',
+      'https://open-source-bazaar.github.io/public-meta-data/china-city-coordinate.json',
     );
 
     return (this.cityCoordinate = body!);
