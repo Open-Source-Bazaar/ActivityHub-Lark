@@ -13,8 +13,8 @@ import { buildURLData } from 'web-utility';
 import { CardPage, CardPageProps } from '../../../components/Layout/CardPage';
 import { PageHead } from '../../../components/Layout/PageHead';
 import { SearchBar } from '../../../components/Navigator/SearchBar';
-import systemStore, { SearchPageMeta } from '../../../models/System';
-import { I18nContext } from '../../../models/Translation';
+import systemStore, { SearchPageMeta } from '../../../models/Base/System';
+import { I18nContext } from '../../../models/Base/Translation';
 
 type SearchModelPageProps = RouteProps<{ model: string }> & SearchPageMeta;
 

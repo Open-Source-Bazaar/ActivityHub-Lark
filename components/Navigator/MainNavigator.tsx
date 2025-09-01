@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import { FC, useContext } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 
-import { I18nContext } from '../../models/Translation';
+import { I18nContext } from '../../models/Base/Translation';
 import { Name } from '../../utility/configuration';
 
 const LanguageMenu = dynamic(() => import('./LanguageMenu'), { ssr: false });

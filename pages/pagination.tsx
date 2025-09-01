@@ -7,7 +7,7 @@ import { Container } from 'react-bootstrap';
 
 import { PageHead } from '../components/Layout/PageHead';
 import { repositoryStore } from '../models/Base';
-import { i18n, I18nContext } from '../models/Translation';
+import { i18n, I18nContext } from '../models/Base/Translation';
 
 @observer
 export default class PaginationPage extends ObservedComponent<{}, typeof i18n> {

@@ -3,8 +3,8 @@ import { InferGetStaticPropsType } from 'next';
 import { FC, useContext } from 'react';
 
 import { MDXLayout } from '../../components/Layout/MDXLayout';
-import { I18nContext } from '../../models/Translation';
-import { ArticleMeta, pageListOf, traverseTree } from '../api/core';
+import { I18nContext } from '../../models/Base/Translation';
+import { ArticleMeta, pageListOf, traverseTree } from '../../utility/MDX';
 
 export const getStaticProps = async () => {
   const tree = await Array.fromAsync(pageListOf('/article'));

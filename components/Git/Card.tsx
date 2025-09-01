@@ -4,7 +4,7 @@ import { observer } from 'mobx-react';
 import { FC, useContext } from 'react';
 import { Badge, Button, Card, CardProps, Col, Row } from 'react-bootstrap';
 
-import { I18nContext } from '../../models/Translation';
+import { I18nContext } from '../../models/Base/Translation';
 import { GitLogo } from './Logo';
 
 export interface GitCardProps

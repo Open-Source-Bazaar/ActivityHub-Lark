@@ -8,7 +8,7 @@ import {
   I18nContext,
   I18nProps,
   loadSSRLanguage,
-} from '../models/Translation';
+} from '../models/Base/Translation';
 
 const enableSentry =
   process.env.NODE_ENV === 'development' || !process.env.SENTRY_AUTH_TOKEN;

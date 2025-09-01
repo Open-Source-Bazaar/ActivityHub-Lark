@@ -30,6 +30,7 @@ jobs:
 
       - name: Lark notification
         uses: foxundermoon/feishu-action@v2
+        if: ${{ env.VERCEL_TOKEN && env.VERCEL_ORG_ID && env.VERCEL_PROJECT_ID }}
         with:
           url: ${{ secrets.LARK_CHATBOT_HOOK_URL }}
           msg_type: post

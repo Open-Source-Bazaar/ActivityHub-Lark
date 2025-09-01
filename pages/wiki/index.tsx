@@ -6,7 +6,7 @@ import { Container } from 'react-bootstrap';
 import { treeFrom } from 'web-utility';
 
 import { PageHead } from '../../components/Layout/PageHead';
-import { I18nContext } from '../../models/Translation';
+import { I18nContext } from '../../models/Base/Translation';
 import wikiStore from '../../models/Wiki';
 import { lark } from '../api/Lark/core';
 

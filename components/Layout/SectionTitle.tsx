@@ -1,0 +1,32 @@
+import { FC, HTMLAttributes } from 'react';
+import { Badge } from 'react-bootstrap';
+
+import { i18n } from '../../models/Base/Translation';
+import styles from './SectionTitle.module.less';
+
+export interface SectionTitleProps extends HTMLAttributes<HTMLHeadingElement> {
+  count?: number;
+}
+
+export const SectionTitle: FC<SectionTitleProps> = ({
+  className = '',
+  title = i18n.t('unclassified'),
+  count = 0,
+  ...props
+}) => (
+  <h2
+    id={title}
+    className={`position-relative border-bottom border-2 border-info lh-lg mb-4 ${styles.sectionTitle} ${className}`}
+    {...props}
+  >
+    <a className="text-decoration-none text-dark" href={`/department/${title}`}>
+      {title}
+    </a>
+    <Badge
+      className="position-absolute translate-middle top-4 mt-2 ms-2 fw-normal fs-6 rounded-pill"
+      bg="info"
+    >
+      {count}
+    </Badge>
+  </h2>
+);
