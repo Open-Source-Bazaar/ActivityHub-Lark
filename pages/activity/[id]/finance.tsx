@@ -78,7 +78,7 @@ export default class BillDetailPage extends ObservedComponent<BillDetailPageProp
       <Container style={{ height: '91vh' }}>
         <PageHead title={t('financial_disclosure') + '-' + name} />
         <Breadcrumb>
-          <Breadcrumb.Item href="/">{t('KaiYuanShe')}</Breadcrumb.Item>
+          <Breadcrumb.Item href="/">{t('Open_Activity_System')}</Breadcrumb.Item>
           <Breadcrumb.Item href="/activity">{t('activity')}</Breadcrumb.Item>
           <Breadcrumb.Item href={`/activity/${id}`}>{name as string}</Breadcrumb.Item>
           <Breadcrumb.Item active>{t('financial_disclosure')}</Breadcrumb.Item>

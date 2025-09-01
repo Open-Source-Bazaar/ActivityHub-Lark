@@ -55,7 +55,7 @@ export default class VolunteerPage extends ObservedComponent<VolunteerPageProps,
       <Container className="py-5">
         <PageHead title={t('volunteer') + '-' + name} />
         <Breadcrumb>
-          <Breadcrumb.Item href="/">{t('KaiYuanShe')}</Breadcrumb.Item>
+          <Breadcrumb.Item href="/">{t('Open_Activity_System')}</Breadcrumb.Item>
           <Breadcrumb.Item href="/activity">{t('activity')}</Breadcrumb.Item>
           <Breadcrumb.Item href={`/activity/${id}`}>{name as string}</Breadcrumb.Item>
           <Breadcrumb.Item active>{t('volunteer')}</Breadcrumb.Item>
