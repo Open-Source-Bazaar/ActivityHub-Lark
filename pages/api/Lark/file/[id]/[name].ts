@@ -3,7 +3,7 @@ import MIME from 'mime';
 import { createKoaRouter } from 'next-ssr-middleware';
 import { Readable } from 'stream';
 
-import { CACHE_HOST } from '../../../../../models/configuration';
+import { CACHE_HOST } from '../../../../../utility/configuration';
 import { withSafeKoaRouter } from '../../../core';
 import { lark } from '../../core';
 
@@ -21,10 +21,9 @@ router.all('/:id/:name', async context => {
 
   const token = await lark.getAccessToken();
 
-  const response = await fetch(
-    lark.client.baseURI + `drive/v1/medias/${id}/download`,
-    { headers: { Authorization: `Bearer ${token}` } },
-  );
+  const response = await fetch(lark.client.baseURI + `drive/v1/medias/${id}/download`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
   const { ok, status, headers, body } = response;
 
   if (!ok) {

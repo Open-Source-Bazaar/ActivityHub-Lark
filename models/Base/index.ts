@@ -6,7 +6,7 @@ import { TableCellAttachment, TableCellMedia, TableCellValue } from 'mobx-lark';
 import { DataObject } from 'mobx-restful';
 import { buildURLData } from 'web-utility';
 
-import { GITHUB_TOKEN, LARK_API_HOST } from './configuration';
+import { GITHUB_TOKEN, LARK_API_HOST } from '../../utility/configuration';
 
 export const larkClient = new HTTPClient({
   baseURI: LARK_API_HOST,
@@ -54,21 +54,15 @@ export function fileURLOf(field: TableCellValue, cache = false) {
 }
 
 export const prefillForm = (data: DataObject) =>
-  buildURLData(
-    Object.entries(data).map(([key, value]) => [`prefill_${key}`, value]),
-  );
+  buildURLData(Object.entries(data).map(([key, value]) => [`prefill_${key}`, value]));
 
-export const wrapTime = (date?: TableCellValue) =>
-  date ? +new Date(date as string) : undefined;
+export const wrapTime = (date?: TableCellValue) => (date ? +new Date(date as string) : undefined);
 
-export const wrapURL = (link?: TableCellValue) =>
-  link ? { link, text: link } : undefined;
+export const wrapURL = (link?: TableCellValue) => (link ? { link, text: link } : undefined);
 
 export const wrapFile = (URIs?: TableCellValue) =>
   (Array.isArray(URIs) ? URIs : [URIs])
-    .map(
-      URI => typeof URI === 'string' && { file_token: URI.split('/').at(-2) },
-    )
+    .map(URI => typeof URI === 'string' && { file_token: URI.split('/').at(-2) })
     .filter(Boolean) as TableCellValue;
 
 export const wrapRelation = (ID?: TableCellValue) =>

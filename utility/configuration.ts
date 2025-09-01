@@ -21,6 +21,7 @@ export const LarkAppMeta = {
   id: process.env.NEXT_PUBLIC_LARK_APP_ID!,
   secret: process.env.LARK_APP_SECRET!,
 };
+export const BITABLE_BASE_ID = process.env.NEXT_PUBLIC_BITABLE_BASE_ID!;
 
 const { hostname, pathname } = new URL(process.env.NEXT_PUBLIC_LARK_WIKI_URL!);
 

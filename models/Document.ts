@@ -1,7 +1,7 @@
 import { DocumentModel } from 'mobx-lark';
 
 import { lark } from '../pages/api/Lark/core';
-import { LarkWikiDomain } from './configuration';
+import { LarkWikiDomain } from '../utility/configuration';
 
 export class MyDocumentModel extends DocumentModel {
   client = lark.client;
