@@ -5,13 +5,9 @@ import { ObservedComponent } from 'mobx-react-helper';
 import { cache, compose, errorLogger, RouteProps, router } from 'next-ssr-middleware';
 import { Badge, Breadcrumb, Col, Container, Dropdown, DropdownButton, Row } from 'react-bootstrap';
 
-import {
-  ActivityPeople,
-  AgendaCard,
-  AgendaToolbar,
-  FileList,
-} from '../../../../../components/Activity';
+import { ActivityPeople, AgendaCard, AgendaToolbar } from '../../../../../components/Activity';
 import { CommentBox } from '../../../../../components/Base/CommentBox';
+import { FileList } from '../../../../../components/Base/FileList';
 import { ScoreBar } from '../../../../../components/Base/ScoreBar';
 import { TimeRange } from '../../../../../components/Base/TimeRange';
 import { PageHead } from '../../../../../components/Layout/PageHead';

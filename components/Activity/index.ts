@@ -1,5 +1,4 @@
 export * from './Agenda/Card';
-export * from './Agenda/FileList';
 export { default as AgendaToolbar, type AgendaToolbarProps } from './Agenda/Toolbar';
 export * from './Card';
 export * from './DrawerNav';

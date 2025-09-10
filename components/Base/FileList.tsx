@@ -5,7 +5,7 @@ import { FilePreview } from 'mobx-restful-table';
 import { FC, useContext } from 'react';
 import { Badge } from 'react-bootstrap';
 
-import { I18nContext } from '../../../models/Base/Translation';
+import { I18nContext } from '../../models/Base/Translation';
 
 export const FileList: FC<{ data: TableCellAttachment[] }> = observer(({ data }) => {
   const { t } = useContext(I18nContext);

@@ -4,8 +4,8 @@ on:
     branches:
       - main
 env:
-  TEMPLATE_OWNER: idea2app
-  TEMPLATE_NAME: Lark-Next-Bootstrap-ts
+  TEMPLATE_OWNER: Open-Source-Bazaar
+  TEMPLATE_NAME: Activityhub-Lark
   REPOSITORY_OWNER: ${{ github.repository_owner }}
   REPOSITORY_NAME: ${{ github.event.repository.name }}
 
